@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Order page for Ice cream website</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/mobile.css" />
+    <meta name="description" content="Assignment 2">
+    <meta name="keywords" content="Order Form">
+    <meta name="author" content="Joanne Woltanski">
+    <!--Alt Davis-->
+
+    <!--Using online based jquery instead of harcoded file-->
+
+</head>
+
+<body>
+    <div id="nav-all">
+        <nav id="nav-menu">
+            <div class="line"></div>
+            <ul class="awning">
+                <li class="panel"><a href="index.html">Index</a></li>
+                <li class="panel"><a href="register.html">Register</a></li>
+                <li class="panel"><a href="order.html">Order</a></li>
+                <li class="panel"><a href="features.html">Features</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <article>
+            <section>
+                <div class="form-link">
+                    <form id="reg-form" method="post" name="registration" action="https://mercury.swin.edu.au/it000000/cos10005/regtest.php">
+                        <!-- Required -->
+                        <fieldset>
+                            <legend>Choose Receive Method:</legend>
+
+                            <label for="recieve-by">Receive By: </label>
+                            <div class="recieve-by">
+                                <input type="radio" name="method" value="delivery" id="delivery"> Delivery
+                                <input type="radio" name="method" value="pickup" id="pickup"> Pickup
+                            </div>
+
+                            <label for="email-address">Pay On: </label>
+                            <div class="recieve-by">
+                                <input type="radio" name="payment-by" value="online" id="pay-online"> Online
+                                <input type="radio" name="payment-by" value="pickup" id="pay-pickup"> In Person
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Payment Method:</legend>
+
+                            <div class="hidden" id="card-section">
+                                <label for="payment-method">Credit-Card Information: </label>
+                                <select name="payment-method">
+                                    <option value="visa">Visa</option>
+                                    <option value="mastercard">Mastercard</option>
+                                    <option value="amex">American Express</option>
+                                </select>
+                            </div>
+
+                            <div class="hidden" id="address-section">
+                                <label for="delivery-address">Delivery Address</label>
+                                <input type="text" name="delivery-address" placeholder="9 Burwood St 3190 Melbourne">
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Other Information:</legend>
+
+                            <div class="billing-address">
+                                <label for="billing">Billing Address</label>
+                                <input type="text" name="billing-address" placeholder="9 Burwood St 3190 Melbourne">
+                            </div>
+
+                            <div class="email-address">
+                                <label for="email-address">Email Address: </label>
+                                <input id="email-address" type="email" name="email-add">
+                            </div>
+
+                            <div class="contact-number">
+                                <label for="contact-number">Contact Number: </label>
+                                <input id="contact-number" type="tel" name="number">
+                            </div>
+                        </fieldset>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <hr>
+        <div class="footer-inner">
+            <!-- Open hours-->
+            <ul class="availability">
+                <li>
+                    <a href="#" class="footer-text"><span class="availability-info">MON-FRI: 8am-5pm</span></a>
+                    <a href="#" class="footer-text"><span class="availability-info">SAT-SUN: 9am-4pm</span></a>
+                </li>
+            </ul>
+            <!--Contact Information-->
+            <ul class="icons">
+                <li>
+                    <!--Add mailto to link-->
+                    <a href="#" class="icon-for-email"><span class="label">Email: CustomerSupport@sweetlife.com </span></a>
+                </li>
+                <li>
+                    <a href="#" class="icon-for-phone"><span class="label">Phone Number: 000 000 000</span></a>
+                </li>
+            </ul>
+            <!--Copywrite info-->
+        </div>
+    </footer>
+</body>
+
+</html>
+
+<!----
+
+_______________________________________________
+|_|        | |        | |       | |         |_|
+|  \_______/ \________/ \_______/ \________/  |
+|                                             |
+| 
+
+
+
+
+
+| | | | | | |_| | \_______/ \________/ \_______/ \________/ | | | | -->

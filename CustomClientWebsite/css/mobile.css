@@ -1,0 +1,45 @@
+@media (max-width: 600px) {
+    .main-box {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        font-size: 0.8rem;
+    }
+    /*Do not touch this it will not work if you touch this, it is the steeve block*/
+    form#reg-form>fieldset {
+        display: block;
+        margin: 0;
+        padding: 0;
+        border: none;
+    }
+    .flavour-option img {
+        display: none;
+    }
+    .mobile-flavours {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .flavour-option {
+        border-radius: 0.5rem;
+        align-items: center;
+        width: fit-content;
+        flex-direction: column;
+    }
+    input,
+    select {
+        transform: scale(0.8);
+    }
+    .flavour-option input {
+        display: inline-block;
+        position: static;
+        opacity: 1;
+    }
+    fieldset label {
+        display: inline-flex;
+        align-items: center;
+        margin-right: 5%;
+        margin-left: 5%;
+        gap: 0.25rem;
+        cursor: pointer;
+    }
+}

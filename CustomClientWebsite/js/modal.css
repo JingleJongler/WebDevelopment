@@ -1,0 +1,68 @@
+        /* Using CSS to style a button 
+*/
+        
+        .button {
+            border: 1px solid black;
+            border-radius: 5px;
+            background-color: lightgrey;
+            background: linear-gradient(#ccc, lightgrey);
+            padding: 0.25em;
+            /* Creates spacing around the text */
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            margin-right: 20px;
+            float: right;
+        }
+        
+        .button:hover {
+            background-color: darkgrey;
+            background: linear-gradient(#ccc, darkgrey);
+            text-decoration: underline;
+        }
+        /* Using CSS to style a window 
+*/
+        
+        .window {
+            display: none;
+            z-index: 2;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: lightblue;
+            border-radius: 15px;
+            border: solid 1px blue;
+            box-shadow: 10px 10px 5px #888;
+            padding: 10px;
+            /* padding for spacing */
+            width: auto;
+            /* auto width to fit content */
+            max-width: 90vw;
+            /* max width 90% viewport */
+            height: auto;
+            /* auto height to fit content */
+            max-height: none;
+            /* no max height to restrict */
+            overflow: visible;
+            /* no scrollbars */
+            white-space: normal;
+            /* allow wrapping */
+            word-wrap: break-word;
+            /* break long words */
+        }
+        /* sets up a transparent pane on the screen, preventing the user to click on any
+   items at layer 0 on the screen */
+        
+        #scrnOverlay {
+            z-index: 1;
+            /* use layer 1 to overlay everything in layer 0 */
+            visibility: hidden;
+            position: fixed;
+            /* Block out the whole screen */
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: grey;
+            opacity: 0.5;
+        }

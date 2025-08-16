@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Register page for Ice cream website</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/mobile.css" />
+    <link rel="stylesheet" href="js/modal.css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <meta name="description" content="Assignment 2">
+    <meta name="keywords" content="Registration Form">
+    <meta name="author" content="Joanne Woltanski">
+    <!--Alt Davis-->
+</head>
+
+<body>
+    <div id="nav-all">
+        <nav id="nav-menu">
+            <div class="line"></div>
+            <ul class="awning">
+                <li class="panel"><a href="index.html">Index</a></li>
+
+
+                <li class="panel"><a href="register.html">Register</a></li>
+
+                <li class="panel"><a href="order.html">Order</a></li>
+
+                <li class="panel"><a href="features.html">Features</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <!--STRUGGLING 
+        -->
+        <div class="main-box">
+            <form id="reg-form" method="POST" name="registration" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php">
+                <fieldset>
+                    <div class="left-column">
+                        <!--Increase space between each-->
+                        <legend h3>Account Information</legend>
+                        <div class="textinput">
+                            <!--UID stands for User  ID-->
+                            <label for="uname">User Name: </label>
+                            <input id="uname" type="textbox" name="unames" />
+                        </div>
+                        <div class="textinput">
+                            <label for="pwd1">Password: </label>
+                            <input id="pwd1" type="password" name="pwd1" />
+                        </div>
+                        <div class="textinput">
+                            <label for="pwd2">Retype Password: </label>
+                            <input id="pwd2" type="password " name="pwd2 " />
+                        </div>
+                        <div class="email-address">
+                            <label for="email-address">Email Address: </label>
+                            <input id="email-address" type="email" name="email-add" />
+                        </div>
+                        <!--Link validation JS-->
+                        <div class="radio-input">
+                            <fieldset>
+                                <legend>Gender</legend>
+                                <div class="radio-group">
+                                    <label>
+                                  <input type="radio" name="gender" value="M" />
+                                  Male
+                                </label>
+                                    <label>
+                                  <input type="radio" name="gender" value="F" />
+                                  Female
+                                </label>
+                                    <label>
+                                  <input type="radio" name="gender" value="N" />
+                                  Non-Binary
+                                </label>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="select-text">How did you hear about us?
+                            <select id="hear-about" name="hear">
+                                <option value="">-- Select --</option>
+                                <option value="Website">Website</option>
+                                <option value="Ad">Ad</option>
+                                <option value="Socials">Social Media</option>
+                                <option value="Mouth">Word of Mouth</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="right-column">
+                        <div class="mobile-flavours" aria-hidden="true">
+                            <label class="flavour-option" for="fudge-caramel">
+                                <input type="checkbox" name="flavour[]" value="FC" id="fudge-caramel" />
+                                Fudge Caramel
+                            </label>
+
+                            <label class="flavour-option" for="mint">
+                                <input type="checkbox" name="flavour[]" value="M" id="mint" />
+                                Choc-Mint
+                            </label>
+
+                            <label class="flavour-option" for="vanilla">
+                                <input type="checkbox" name="flavour[]" value="V" id="vanilla" />
+                                Vanilla
+                            </label>
+
+                            <label class="flavour-option" for="neapolitan">
+                                <input type="checkbox" name="flavour[]" value="N" id="neapolitan" />
+                                Neapolitan
+                            </label>
+
+                            <label class="flavour-option" for="rainbow">
+                                <input type="checkbox" name="flavour[]" value="R" id="rainbow" />
+                                Rainbow
+                            </label>
+
+                            <label class="flavour-option" for="cookies">
+                                <input type="checkbox" name="flavour[]" value="CC" id="cookies" />
+                                Cookies
+                            </label>
+                        </div>
+                        <fieldset class="flavour-stack">
+                            <legend>Favorite Flavour</legend>
+                            <div class="flavour-images">
+                                <label class="flavour-option">
+                                    <input type="checkbox" name="flavour[]" value="FC" />
+                                    <div class="flavour-content">
+                                      <img src="images/caramel.png" alt="Fudge Caramel Swirl scoop" class="scoop"/>
+                                      <img src="images/cone.png" alt="ice cream cone"class="cone" />
+                                      <span>Choc-Caramel</span>
+                                    </div>
+                                  </label>
+
+                                <label class="flavour-option">
+                                    <input type="checkbox" name="flavour[]" value="M" />
+                                    <div class="flavour-content">
+                                      <img src="images/mint.png" alt="Mint ice cream scoop" class="scoop"/>
+                                      <img src="images/cone.png" alt="ice cream cone"class="cone" />
+                                      <span>Choc-Mint</span>
+                                    </div>
+                                  </label>
+
+                                <label class="flavour-option">
+                                    <input type="checkbox" name="flavour[]" value="V" />
+                                    <div class="flavour-content">
+                                      <img src="images/vanilla.png" alt="Vanilla ice cream scoop" class="scoop"/>
+                                      <img src="images/cone.png" alt="ice cream cone" class="cone"/>
+                                      <span>Vanilla</span>
+                                    </div>
+                                  </label>
+
+                                <label class="flavour-option">
+                                    <input type="checkbox" name="flavour[]" value="N" />
+                                    <div class="flavour-content">
+                                      <img src="images/neapolitan.png" alt="Neapolitan ice cream scoop" class="scoop"/>
+                                      <img src="images/cone.png" alt="ice cream cone" class="cone"/>
+                                      <span>Neapolitan</span>
+                                    </div>
+                                  </label>
+
+                                <label class="flavour-option">
+                                    <input type="checkbox" name="flavour[]" value="R" />
+                                    <div class="flavour-content">
+                                      <img src="images/rainbow.png" alt="Rainbow ice cream scoop"class="scoop" />
+                                      <img src="images/cone.png" alt="ice cream cone"class="cone" />
+                                      <span>Rainbow</span>
+                                    </div>
+                                  </label>
+
+                                <label class="flavour-option">
+                                    <input type="checkbox" name="flavour[]" value="CC" />
+                                    <div class="flavour-content">
+                                      <img src="images/cream.png" alt="Cookies and Cream ice cream scoop"class="scoop" />
+                                      <img src="images/cone.png" alt="ice cream cone"class="cone" />
+                                      <span>Cookies</span>
+                                    </div>
+                                  </label>
+                                <!--Due to issues with complex code i have implemented this section which only appears in mobile condiiton, seee mobile.css, this is the easiest way -->
+                            </div>
+
+                        </fieldset>
+                        <div class="button-input">
+                            <input type="submit" value="Test-Register" /> <button type="button" id="reset-btn">Reset</button>
+                        </div>
+            </form>
+
+    </main>
+
+    <footer>
+        <hr />
+        <div class="footer-inner ">
+            <!-- Open hours-->
+            <ul class="availability ">
+                <li>
+                    <a href="# " class="footer-text "><span class="availability-info ">MON-FRI: 8am-5pm</span></a>
+                    <a href="# " class="footer-text "><span class="availability-info ">SAT-SUN: 9am-4pm</span></a>
+                </li>
+            </ul>
+            <!--Contact Information-->
+            <ul class="icons ">
+                <li>
+                    <!--Add malitio to link-->
+                    <a href="# " class="icon-for-email "><span class="label ">Email: CustomerSupport@sweetlife.com </span></a>
+                </li>
+                <li>
+                    <a href="# " class="icon-for-phone "><span class="label ">Phone Number: 000 000 000</span></a>
+                </li>
+            </ul>
+            <!--Copywrite info-->
+        </div>
+    </footer>
+
+</body>
+
+</html>
+
+<!--
+Dummy data
+Apple
+Apple@12345
+Apple@12345
+Apple@gmail.com
+
+
+-->

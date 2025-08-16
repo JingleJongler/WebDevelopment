@@ -1,0 +1,321 @@
+/*About me page
+*/
+
+
+/*CHANEG NO LIKELY*/
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body,
+main {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+main {
+    background-color: #FFF6E5;
+    border-radius: 1%;
+    padding: 10px;
+    margin: 10px;
+}
+
+.history-block {
+    background-color: red;
+    width: 95%;
+    height: 100px;
+    padding: 0;
+    margin-left: 2%;
+}
+
+.hidden {
+    display: none;
+}
+
+#unlisted {
+    display: none;
+}
+
+#gen-unlist:checked+#unlisted {
+    display: block;
+}
+
+#addLiveOthers {
+    display: none;
+}
+
+
+/*--------------------------Nav Bar Arwner---------------------------------------**/
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
+    background-color: rgb(223, 153, 54);
+    /* avoid horizontal scroll */
+}
+
+.awning {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    z-index: 3;
+    overflow: hidden;
+    height: 60px;
+}
+
+.panel {
+    flex: 1 1 0;
+    height: 60%;
+    background-color: red;
+    position: relative;
+    z-index: 1;
+    /* base layer */
+}
+
+.panel:nth-child(even) {
+    background-color: white;
+}
+
+
+/* The shape background */
+
+.panel::after {
+    content: '';
+    position: absolute;
+    bottom: -50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    border-bottom-left-radius: 100% 100%;
+    border-bottom-right-radius: 100% 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+
+/* Link styling */
+
+.panel a {
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    top: 15%;
+    height: 90%;
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 2;
+    /* above the ::after */
+}
+
+.awning li {
+    flex: 1 1 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    /* also ensure li has no bullet */
+}
+
+.all-content {
+    background-color: rgb(227, 181, 143);
+    width: 90%;
+    min-height: 100vw;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 10px;
+    background-color: rgb(255, 222, 152);
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------FOOTER  -------------------------------------------------------------------------------------------------------------*/
+
+footer {
+    width: 94%;
+    margin-left: 3%;
+    background-color: white;
+}
+
+
+/*------------------------------------------------------------Index------------------------------------------------*/
+
+#choc-mint {
+    background-color: #B8E0D2;
+    /*gradient*/
+}
+
+#vanilla {
+    background-color: #FFF6E5;
+    /*gradient*/
+}
+
+#neapolitan {
+    background-color: #FBA1B7;
+    /*gradient*/
+}
+
+#rainbow {
+    background-color: #D8B4F8;
+}
+
+#choc-caramel-vanilla-swirl {
+    background-color: #D7A86E;
+}
+
+.main-box {
+    gap: 1rem;
+    box-sizing: border-box;
+    width: 100%;
+    /* full width */
+}
+
+.main-box2 {
+    gap: 1rem;
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    /* full width */
+}
+
+.left-column,
+.right-column {
+    flex: 1;
+    min-width: 200px;
+    padding: 1rem;
+    margin-right: 1rem;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+
+/* Background colors for clarity */
+
+.left-column {
+    background-color: #FFF6E5;
+}
+
+.right-column {
+    background-color: #FDE2E4;
+    overflow-y: auto;
+    max-height: 100vh;
+}
+
+#intro {
+    background-color: lightblue;
+}
+
+.about-image {
+    display: flex;
+    gap: 1rem;
+    background-color: rgb(58, 167, 203);
+    flex: 1;
+}
+
+.about-us {
+    display: flex;
+    gap: 1rem;
+}
+
+
+/*FORM STUFF*/
+
+.flavour-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 2% auto 0 auto;
+    /* 2 columns */
+}
+
+.flavour-option {
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px;
+    border: 3px solid transparent;
+    border-radius: 12px;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+
+/* Hide the checkbox */
+
+.flavour-option input {
+    display: none;
+}
+
+.flavour-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flavour-content img {
+    width: 80px;
+    margin: 4px 0;
+    margin-top: -40px;
+    z-index: 0;
+}
+
+.flavour-content span {
+    margin-top: 6px;
+    font-size: 0.9rem;
+}
+
+
+/*THIS triggers the border */
+
+.flavour-option:has(input:checked) {
+    border-color: red;
+    transform: scale(1.03);
+}
+
+.flavour-content img.cone {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Ensure scoop is above only when selected */
+
+.flavour-option:has(input:checked) .flavour-content img.scoop {
+    position: relative;
+    z-index: 2;
+}
+
+
+/*This controls the 2 colun layout do not ask why, */
+
+form#reg-form>fieldset {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+
+/*Form stuff*/
+
+input {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    /* Optional for consistency */
+    box-sizing: border-box;
+}
+
+.mobile-flavours {
+    display: hidden;
+    visibility: hidden;
+}
