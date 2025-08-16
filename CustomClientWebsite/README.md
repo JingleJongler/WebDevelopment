@@ -22,4 +22,4 @@ This is the custom client website I created for my Assignment 2 for COS10005 at 
 2. Open `index.html` in a web browser
 
 ## Notes
-This project received a **High Distinction** in the course.
+This project received a **High Distinction** in the course, and I created all of the graphics Used.
