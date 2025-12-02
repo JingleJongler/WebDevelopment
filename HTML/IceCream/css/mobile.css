@@ -1,0 +1,74 @@
+        @media (max-width: 600px) {
+            .main-box {
+                display: flex;
+                flex-direction: column;
+                gap: 0;
+                font-size: 0.8rem;
+            }
+            /*Do not touch this it will not work if you touch this, it is the steeve block*/
+            form#reg-form>fieldset {
+                display: block;
+                margin: 0;
+                padding: 0;
+                border: none;
+            }
+            .flavour-option img {
+                display: none;
+            }
+            .mobile-flavours {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .flavour-option {
+                border-radius: 0.5rem;
+                align-items: center;
+                width: fit-content;
+                flex-direction: column;
+            }
+            input,
+            select {
+                transform: scale(0.8);
+            }
+            .flavour-option input {
+                display: inline-block;
+                position: static;
+                opacity: 1;
+            }
+            fieldset label {
+                display: inline-flex;
+                align-items: center;
+                margin-right: 5%;
+                margin-left: 5%;
+                gap: 0.25rem;
+                cursor: pointer;
+            }
+            fieldset {
+                border: 2px solid #ffb6b6;
+                /*More dreamy vibes*/
+                border-radius: 10px;
+                padding: 0.25rem;
+                margin-bottom: 0.2em;
+                width: 100%;
+                background-color: #fff6e5;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+                transition: background-color 0.3s ease;
+            }
+            label,
+            textarea {
+                width: 100%;
+                padding: 2px 4px;
+            }
+            .select-text {
+                font-size: clamp(10px, 0.9vw, 12px);
+            }
+            .radio-group label {
+                font-size: clamp(14px, 1vw, 15px);
+                margin: 0;
+            }
+            #hear-about {
+                font-size: clamp(15px, 2vw, 16px);
+            }
+            legend {
+                font-size: clamp(20px, 2vw, 39px);
+            }
+        }

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Order page for Ice cream website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <meta name="description" content="Assignment 2">
+    <meta name="keywords" content="Registration Form">
+    <meta name="author" content="Joanne Woltanski">
+    <!--Alt Davis-->
+    <!--Using online based jquery instead of harcoded file-->
+</head>
+
+<body>
+    <div id="nav-all">
+        <nav id="nav-menu">
+            <div class="line"></div>
+            <ul class="awning">
+                <li class="panel"><a href="index.html">Index</a></li>
+                <li class="panel"><a href="register.html">Register</a></li>
+                <li class="panel"><a href="order.html">Order</a></li>
+                <li class="panel"><a href="features.html">Features</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <h1>ORDER FORM</h1>
+        <form id="order-form" method="post" name="registration" novalidate action="https://mercury.swin.edu.au/it000000/cos10005/regtest.php">
+
+            <div class="main-box3">
+                <div class="left-column">
+                    <fieldset>
+                        <legend class="stronger">Receive Method:</legend>
+                        <label for="delivery">Delivery
+                            <input type="radio" name="method" value="delivery" id="delivery">
+                        </label>
+                        <label for="pickup">Pickup
+                            <input type="radio" name="method" value="pickup" id="pickup">
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend class="stronger">Payment Method:</legend>
+                        <label for="pay-online">Pay On: </label>
+                        <div class="radio-input">
+                            <label for="pay-online">Online
+                                <input type="radio" name="payment-by" value="online" id="pay-online">
+                            </label>
+                            <label for="pay-pickup" id="pay-pickup-label">In Person
+                                <input type="radio" name="payment-by" value="pickup" id="pay-pickup">
+                            </label>
+                        </div>
+
+                        <div id="payment-method-section">
+                            <label for="payment-method">Credit Card Information:</label>
+                            <select name="payment-method" id="payment-method">
+                                <option value="">Select Card Type</option>
+                                <option value="visa">Visa</option>
+                                <option value="mastercard">Mastercard</option>
+                                <option value="amex">AmericanExpress</option>
+                            </select>
+                        </div>
+
+                        <div id="card-section" class="hidden">
+                            <label for="card-number-input">Card Number</label>
+                            <input type="text" id="card-number-input" name="card-number" placeholder="Card Number">
+                            <div id="card-error" class="error"></div>
+                        </div>
+                    </fieldset>
+                </div>
+                <!-- close left-column -->
+
+                <fieldset>
+                    <legend>Address</legend>
+                    <div id="delivery-address">
+                        <label for="full-name">Full Name</label>
+                        <input type="text" name="full-name" id="full-name" placeholder="Jane Doe">
+                        <label for="street-address">House Number and Street</label>
+                        <input type="text" name="street-address" id="street-address" placeholder="123 Example St">
+                        <label for="postcode">Postcode</label>
+                        <input type="text" name="postcode" id="postcode" placeholder="3000" pattern="\d*">
+                        <label for="city">City</label>
+                        <input type="text" name="city" id="city" placeholder="Melbourne">
+                        <label for="state">State</label>
+                        <select id="state" name="state">
+                            <option value="">-- Select State --</option>
+                            <option value="VIC">VIC</option>
+                            <option value="QLD">QLD</option>
+                            <option value="WA">WA</option>
+                            <option value="SA">SA</option>
+                            <option value="NT">NT</option>
+                            <option value="NSW">NSW</option>
+                            <option value="ACT">ACT</option>
+                            <option value="TAS">TAS</option>
+                        </select>
+                        <hr>
+                    </div>
+
+                    <h3>Billing Address</h3>
+                    <div id="billing-address">
+                        <label for="billing-full-name">Full Name</label>
+                        <input type="text" name="billing-full-name" id="billing-full-name" placeholder="Jane Doe">
+
+                        <label for="billing-street-address">House Number and Street</label>
+                        <input type="text" name="billing-street-address" id="billing-street-address" placeholder="123 Example St">
+
+                        <label for="billing-postcode">Postcode</label>
+                        <input type="text" name="billing-postcode" id="billing-postcode" placeholder="3000" maxlength="4" minlength="4">
+
+                        <label for="billing-city">City</label>
+                        <input type="text" name="billing-city" id="billing-city" placeholder="Melbourne">
+
+                        <label for="billing-state">State</label>
+                        <select id="billing-state" name="billing-state" required>
+                            <option value="">-- Select State --</option>
+                            <option value="VIC">VIC</option>
+                            <option value="QLD">QLD</option>
+                            <option value="WA">WA</option>
+                            <option value="SA">SA</option>
+                            <option value="NT">NT</option>
+                            <option value="NSW">NSW</option>
+                            <option value="ACT">ACT</option>
+                            <option value="TAS">TAS</option>
+                        </select>
+                        <div id="same-as-delivery">
+                            <label>
+                                <input type="checkbox" id="same-as-delivery-checkbox" name="same-as-delivery">
+                                Same as delivery address
+                            </label>
+                            <div id="billing-error" class="error"></div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <!-- close main-box3 -->
+
+            <fieldset>
+                <legend>Other Details</legend>
+
+                <div class="email-address">
+                    <label for="email-address">Email Address:</label>
+                    <input id="email-address" type="email" name="email">
+                    <div id="emailerror" class="error"></div>
+                </div>
+
+                <div class="contact-number">
+                    <label for="contact-number">Contact Number:</label>
+                    <input id="contact-number" type="tel" name="number" pattern="\d*">
+                    <div id="contact-error" class="error"></div>
+                </div>
+            </fieldset>
+
+            <div class="button-input">
+                <input type="submit" value="Test-Register">
+            </div>
+        </form>
+    </main>
+
+
+    <footer>
+        <hr>
+        <div class="footer-inner">
+            <!-- Logo -->
+            <div class="footer-logo">
+                <img src="images/logo.png" alt="SweetLife Logo">
+            </div>
+            <!-- Open hours -->
+            <ul class="availability">
+                <li>
+                    <span class="footer-text">
+                      <strong>Open Hours</strong>
+                      <strong>MON-FRI:</strong> 8am - 5pm
+                    </span>
+                </li>
+                <li>
+                    <span class="footer-text">
+                        <strong>SAT-SUN:</strong> 9am - 4pm
+                    </span>
+                </li>
+            </ul>
+
+            <!-- Contact Information -->
+            <ul class="icons">
+                <li>
+                    <a href="mailto:CustomerSupport@sweetlife.com" class="icon-for-email" aria-label="Email Customer Support">
+                Email: CustomerSupport@sweetlife.com
+              </a>
+                </li>
+                <li>
+                    <a href="tel:0000000000" class="icon-for-phone" aria-label="Call Customer Support">
+                Phone Number: 000 000 000
+              </a>
+                </li>
+            </ul>
+
+            <!-- Copyright info -->
+            <p class="copywrite">&copy; 2025 SweetLife. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,679 @@
+    @media screen and (max-width: 600px) {
+        /*Due to only having 2 css files i have set up css for majority combinded tablet with mobile, */
+        /*---------------------------Default elements Start-------------------------------*/
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #f9e900;
+            font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        }
+        main {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+            /*apperance*/
+            background-color: rgb(250, 240, 207);
+            border: 4px solid red;
+            /*padding and size*/
+            width: 85%;
+            margin-top: -0.5%;
+            min-height: auto;
+            padding: 1vw;
+            margin: 2vw;
+            margin-left: 7.5%;
+            /* Overflow and wrapping */
+            overflow: auto;
+            overflow-x: auto;
+            word-wrap: break-word;
+        }
+        main article {
+            width: 95%;
+        }
+        h1 {
+            padding: 2px;
+            font-size: clamp(14px, 1vw, 25px);
+        }
+        h2 {
+            font-size: clamp(14px, 1.5vw, 25px);
+            padding-top: 10px;
+            font-weight: 600;
+        }
+        h3 {
+            font-size: 1.5vw;
+        }
+        h1,
+        h2 {
+            color: rgb(78, 36, 36);
+            text-align: center;
+            margin: 0px;
+        }
+        hr {
+            width: 105%;
+            border: 1px solid red;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        p {
+            /* font-size: 20px; ALT SIZE*/
+            font-size: clamp(10px, 1vw, 12px);
+            color: rgb(118, 51, 51);
+        }
+        ol {
+            font-size: clamp(10px, 1vw, 12px);
+            margin-left: 30px;
+            list-style-type: none;
+        }
+        ol li,
+        ul li {
+            color: rgb(118, 51, 51);
+            padding: 0px;
+            font-weight: 100;
+            list-style-type: none;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th,
+        td {
+            padding: 2px;
+            text-align: left;
+            border: 1px solid rgb(231, 117, 0);
+            font-size: clamp(8px, 1vw, 18px);
+        }
+        th {
+            background-color: rgb(242, 194, 71);
+            color: rgb(73, 48, 25);
+        }
+        img {
+            object-fit: contain;
+            height: 100%;
+            width: 100%;
+        }
+        /*------------------------------Text Related---------------------------------------------------*/
+        /*Used for context part of AboutMe page and */
+        .small {
+            color: rgb(164, 60, 60);
+            font-size: clamp(7px, 0.5vw, 10px);
+            margin-left: 20px;
+            padding-right: 20px;
+        }
+        .small strong {
+            font-weight: 600;
+        }
+        /*------------------------------Text Related---------------------------------------------------*/
+        /*---------------------------Nav-Bar  Start---------------------------------*/
+        /*Animation 2
+        A hover animation, it capitalizes all text,increases the letter-spacing and makes a blue line appear under the word hovered, 
+        Implementations below, include teh above, aswell as a few other things.
+            On The Timetable page, it appears as a button, and the increase padding property can be seen
+            In the footer, it turns the text red, 
+        
+        */
+        a {
+            color: rgb(240, 38, 42);
+        }
+        a:hover,
+        #submitbtn:hover {
+            text-decoration: none;
+            border-bottom: 0.5em solid rgb(255, 134, 20);
+            text-transform: uppercase;
+            font-weight: 700;
+            color: rgb(0, 72, 240);
+            letter-spacing: 0.2ch;
+        }
+        #validator-link:hover,
+        #gov-link-1:hover,
+        #gov-link-2:hover {
+            border-bottom: 0.2em solid rgb(255, 134, 20);
+        }
+        nav {
+            margin: 0;
+            padding: 0;
+        }
+        .nav-bar-container {
+            width: 90%;
+            margin: 0 auto;
+            box-sizing: border-box;
+            margin-top: 1vh;
+            margin-left: 5vw;
+        }
+        .nav-bar-main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-bar-items {
+            /* padding: 1vw;
+        padding-left: 2vw;
+        margin: 1vw 0.5vw;
+        width: auto;
+        max-width: 120%;*/
+            padding: 1vw 1vw;
+            flex: 1;
+            margin: 0.5vw 0.5vw;
+            color: rgb(240, 38, 42);
+            background-color: rgb(255, 186, 12);
+            border: 5px solid red;
+            font-size: clamp(9px, 2vw, 25px);
+            text-align: center;
+            display: inline-block;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+        /*---------------------------Nav-Bar  End---------------------------------*/
+        /*---------------------------Container----------------------------*/
+        .container {
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 1%;
+        }
+        .column {
+            width: 100%;
+            margin-bottom: 0px;
+        }
+        /*---------------------------Container Boxes Start---------------------------------*/
+        .header-title-container {
+            width: 100%;
+            height: auto;
+            border: 10px solid red;
+            background-color: rgb(255, 186, 12);
+            color: rgb(240, 38, 42);
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .box-container,
+        .box-container-v2,
+        .box-container-v3,
+        .box-container-v3-game {
+            background-color: rgb(255, 186, 12);
+            border: 3px solid rgb(240, 38, 42);
+            color: rgb(240, 38, 42);
+            display: flex;
+            margin-top: 10px;
+            margin: 2px;
+            justify-content: center;
+        }
+        .box-container-v3,
+        .box-container-v3-game {
+            width: 100%;
+            padding: 2px;
+            position: relative;
+            margin: 5px;
+        }
+        .box-container {
+            width: 20%;
+            font-size: 30px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .box-container-v2 {
+            width: 35%;
+            font-size: 25px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .introduction-section .box-container-v3,
+        .hometown-intro .box-container-v3 {
+            margin-left: 8%;
+            right: 2%;
+            width: 90%;
+        }
+        /*---------------------------Container Boxes End---------------------------------*/
+        /*------------------------Text Elements Start-------------------------------------------- */
+        .paragraph-text {
+            font-size: clamp(10px, 1.5vw, 14px);
+            margin: 0;
+            margin-left: 15px;
+            padding: 10px;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+        .h1-title {
+            font-size: 3vw;
+            color: red;
+            margin: 0;
+            text-shadow: 2px -1px black, 2px -1px 0 black, 2px 1px 0 black, 2px 1px 0 black;
+            /*Resource for outline around text
+    https://fluentsupport.com/how-to-create-outline-text-in-css/
+    
+    */
+        }
+        /*------------------------Text Elements End --------------------------------------------*/
+        /*---------------------------Index  Start---------------------------------*/
+        #dog-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            margin-left: 30%;
+        }
+        /*---------------------------Index  End---------------------------------*/
+        /*---------------------------homeTown Start-------------------------------------------*/
+        #map {
+            width: 50%;
+            padding: 0;
+            margin: 0;
+        }
+        .population-stats-gender,
+        .population-stats-ancestry {
+            width: 90%;
+            max-width: 70%;
+        }
+        .population h2,
+        .ancestry h2 {
+            font-size: clamp(12px, 1vw, 15px);
+            width: 53%;
+            float: left;
+        }
+        .population table,
+        .ancestry table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 48%;
+            height: 10%;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            margin: 20px;
+            margin-left: 5%;
+        }
+        .population table th,
+        .ancestry table th {
+            font-size: clamp(10px, 1vw, 15px);
+            color: rgb(107, 0, 44);
+        }
+        .population table td,
+        .population table tr,
+        .ancestry table td,
+        .ancestry table tr {
+            font-size: clamp(10px, 1vw, 12px);
+            color: rgb(58, 38, 69);
+            padding: 4px;
+        }
+        .hometown-page .basics {
+            width: 50%;
+            left: 25%;
+            position: relative;
+            font-size: clamp(13px, 1.5vw, 25px);
+        }
+        /*---------------------------homeTown End-------------------------------------------*/
+        /*---------------------------Favorites Start-------------------------------------------*/
+        .favorites-all .box-container-v3,
+        .favorites-all .box-container-v3-game {
+            width: 80%;
+            align-items: center;
+            justify-content: center;
+            margin-left: 2%;
+        }
+        .favorites-all .box-container-v3-game {
+            margin-left: 10%;
+        }
+        .favorites-all {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-radius: 10px;
+            width: 100%;
+        }
+        aside img {
+            width: 50%;
+            height: auto;
+            margin-left: 10%;
+        }
+        .favorite-tv-shows {
+            display: flex;
+            margin-right: 20px;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .favorite-games {
+            margin-right: 20px;
+        }
+        .favorite-games-list {
+            padding: 5px;
+        }
+        .favorite-tv-shows-list-item,
+        .favorite-games-list-item {
+            padding-left: 10px;
+            line-height: 80%;
+            margin: 0px;
+            font-size: clamp(9px, 1vw, 10px);
+        }
+        /*Controls the main list items in the fav section of the about me page, makes the under be smaller*/
+        .favorite-tv-shows-list-item p,
+        .favorite-games-list-item p {
+            margin: 5px 1px;
+            font-size: clamp(8px, 1vw, 10px);
+            color: rgb(164, 60, 60);
+            font-weight: 100;
+        }
+        /*Controls the main list items in the fav section of the about me page,controls the main item responsive*/
+        .favorite-tv-shows-list-item,
+        .favorite-games-list-item {
+            padding-left: 1%;
+            font-size: clamp(10px, 1vw, 11px);
+            font-weight: 400;
+        }
+        /*Controls the red number appearances*/
+        .number {
+            font-weight: bold;
+            color: red;
+        }
+        span/*Only used with number element*/
+        {
+            font-size: clamp(12px, 1vw, 18px);
+        }
+        /*---------------------------About Me Start----------------------------------------*/
+        .basics,
+        .about-me-box-info {
+            border: 2px solid rgb(240, 38, 42);
+            background-color: rgb(255, 186, 12);
+            width: 90%;
+            padding: 5px;
+            text-align: center;
+            margin-left: 5%;
+        }
+        .basics p {
+            font-size: clamp(9px, 1vw, 11px);
+            padding: 0;
+        }
+        .basics-box-position-v2 {
+            margin-left: 20px;
+            text-align: center;
+        }
+        .achievements .about-me-items li {
+            padding: 0px;
+            margin: 10px;
+            font-size: clamp(8px, 1vw, 10px);
+        }
+        /*Refers to the context portion of the achievement section of the about me page,*/
+        blockquote a {
+            color: rgb(240, 38, 42);
+        }
+        .about-me-items li {
+            padding-right: 5vw;
+            color: rgb(118, 51, 87);
+            font-size: clamp(8px, 1vw, 10px);
+        }
+        .column .box-container-v3 {
+            width: 95%;
+        }
+        .basics h2 {
+            font-size: clamp(12px, 1.5vw, 20px);
+            padding: 0;
+            margin: 0;
+            color: red;
+            padding-left: 20px;
+        }
+        .achievements {
+            flex-basis: 100%;
+            box-sizing: border-box;
+            margin-left: 1rem;
+        }
+        /*---------------------------About Me END----------------------------------------*/
+        /*---------------------------TimeTable Start----------------------------------------*/
+        #time-table-container {
+            overflow-x: auto;
+            display: flex;
+            width: calc(100% - 10px);
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        #heading {
+            margin: 10px;
+            margin-top: 5px;
+        }
+        .timetable-page #dog-logo {
+            width: 15%;
+            margin-left: 3%;
+            margin-top: 10%;
+        }
+        table caption {
+            font-size: clamp(10px, 1.2vw, 12px);
+        }
+        .timetable-page table {
+            position: relative;
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+        .timetable-page .box-container-v3 {
+            width: 90%;
+            margin: 10px;
+            padding: 5px;
+            margin-top: -10px;
+        }
+        .timetable-page table td,
+        .timetable-page table tr {
+            padding: 1px;
+            text-align: center;
+            position: relative;
+            font-size: clamp(7px, 1vw, 10px);
+        }
+        /*change color of the day class items=mon,tue,wed,thu,fri to brown*/
+        table .day {
+            color: rgb(73, 48, 25);
+        }
+        /*Subject code guides*/
+        .cos10005,
+        .cos20019,
+        .cos20031,
+        .cos30019 {
+            font-weight: bold;
+        }
+        .cos10005 {
+            color: rgb(0, 0, 255);
+        }
+        .cos20031 {
+            color: rgb(62, 153, 67);
+        }
+        .cos20019 {
+            color: rgb(255, 166, 0);
+        }
+        .cos30019 {
+            color: rgb(255, 0, 0);
+        }
+        /*-------------------------Form Start-----------------------------*/
+        .enrolled {
+            font-weight: bold;
+            font-size: clamp(10px, 1.5vw, 14px);
+            color: rgb(255, 0, 0);
+        }
+        legend {
+            font-weight: bold;
+            color: rgb(255, 0, 0);
+            font-size: clamp(10px, 2vw, 15px);
+            padding: 5px;
+        }
+        fieldset {
+            padding: 10px;
+            font-size: clamp(10px, 2vw, 15px);
+        }
+        fieldset .basics {
+            width: 25%;
+            padding: 5px;
+            margin-left: 0%;
+        }
+        fieldset label {
+            font-size: clamp(7px, 2vw, 12px);
+        }
+        .cos0000 {
+            color: rgb(118, 51, 51);
+        }
+        .form-link {
+            padding: 10px;
+        }
+        #submitbtn {
+            font-size: clamp(10px, 2vw, 15px);
+            background-color: rgb(255, 186, 12);
+            color: rgb(255, 0, 0);
+            padding: 2.5px;
+            padding-left: 1vw;
+            border: solid rgb(255, 0, 0);
+            padding-right: 1vw;
+        }
+        #hidden-box {
+            display: none;
+            font-size: clamp(10px, 2vw, 14px);
+        }
+        #another:checked+#hidden-box
+        /*Reveal the input if the checkbox is checked*/
+        {
+            display: block;
+        }
+        /*Inital state-hide the div*/
+        #other-class {
+            display: none;
+        }
+        /*Condition for when to show the hidden if checkbox is currently checked*/
+        #another:checked+#hidden-box+#other-class {
+            display: block;
+        }
+        /*Condition for if field is left empty and checkbox is not checked*/
+        input:invalid {
+            border: 2px solid rgb(255, 0, 0);
+        }
+        /*Checkbox size*/
+        input[type="checkbox"] {
+            transform: scale(0.9);
+        }
+        /*Initally the box will be hidden, unless*/
+        /*-------------------------Form End-----------------------------*/
+        /*---------------------------TimeTable End----------------------------------------*/
+        /*-------------------------------Footer Start---------------------------------------*/
+        anime */ .animations {
+            margin: 0;
+            padding: 0;
+            margin-bottom: -5%;
+        }
+        .animations .cont p {
+            font-size: 19px;
+        }
+        /*aniamtionssssssssssss IT IS*/
+        .animations .column {
+            margin: 0;
+            width: 100%;
+        }
+        .all-links {
+            margin: 2%;
+        }
+        .animation-link {
+            color: #0077cc;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 2px;
+            display: block;
+            top: 14.285vh;
+            padding: 2%;
+            cursor: pointer;
+        }
+        .animation-3 {
+            padding: 5%;
+            padding-bottom: 0;
+        }
+        .animation-link strong {
+            color: rgb(240, 38, 42);
+            font-size: clamp(12px, 1.7vw, 25px);
+        }
+        /*Artifical nav bar target*/
+        #nav-bar {
+            padding: 10px;
+            transition: border 0.3s ease;
+        }
+        #nav-bar:target {
+            border: 2px solid black;
+        }
+        /*Artifical footer bar target*/
+        #footer-nav {
+            padding: 10px;
+            transition: border 0.3s ease;
+        }
+        #footer-nav:target {
+            border: 2px solid black;
+        }
+        /*-------------------Animation 1-------------------------------------------------------
+    Img bounce only when cursor is hovering*/
+        #logo {
+            width: 15%;
+            display: inline-block;
+            transition: border 0.3s ease;
+        }
+        /*Artifical footer bar target*/
+        #logo:target {
+            border: 2px solid black;
+        }
+        #logo:focus {
+            border: 5px solid black;
+        }
+        #logo:hover {
+            animation: bounce 0.6s ease-in-out infinite;
+        }
+        @keyframes bounce {
+            0%,
+            100% {
+                transform: translateY(-15px);
+            }
+            50% {
+                transform: translateY(0);
+            }
+        }
+        /*aniamtion stuff*/
+        footer {
+            max-width: 97%;
+            background-color: rgb(255, 186, 12);
+            border: 5px solid rgb(240, 38, 42);
+            box-sizing: border-box;
+            position: relative;
+            margin: 10px;
+            top: 10px;
+            right: 1%;
+            left: 1%;
+            margin-right: 5%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: rgb(11, 11, 97);
+            text-align: center;
+        }
+        #contact strong {
+            font-size: clamp(12px, 1.7vw, 25px);
+        }
+        .footer-text h2 {
+            font-size: clamp(12px, 1vw, 18px);
+        }
+        .footer-text {
+            font-size: clamp(10px, 1vw, 20px);
+        }
+        .footer-link-nav {
+            display: flex;
+            justify-content: center;
+            /* Center horizontally */
+            padding: 10px;
+            margin-top: 10px;
+        }
+        .footer-link-nav li {
+            /*Link space*/
+            list-style-type: none;
+            margin: 0 1%;
+        }
+        .footer-link-nav li a {
+            text-decoration: none;
+            font-size: clamp(10px, 1vw, 14px);
+        }
+        .footer-link-nav li a:hover {
+            color: rgb(240, 38, 42);
+        }
+        #logo {
+            width: 100px;
+            height: auto;
+            margin: 0;
+            padding: 0;
+        }
+        /*---------------------------Footer  End-------------------------------------------*/
+    }

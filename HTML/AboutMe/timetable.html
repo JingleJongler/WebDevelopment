@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Index</title>
+    <link rel="stylesheet" type="text/css" href="style/mobile.css">
+    <link rel="stylesheet" type="text/css" href="style/desktop.css">
+    <meta name="description" content="Timetable page for assignment 1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <header>
+
+        <!-- Main Title Header Section-->
+        <div class="header-title-container">
+            <h1 class="h1-title">Assignment 1 Cos10005</h1>
+        </div>
+        <!-- Navigation Bar using ARIA landmarks-->
+        <nav class="nav-bar-container">
+            <div class="nav-bar-main" id="nav-bar">
+                <a href="index.html " class="nav-bar-items" aria-label="Move to the Index page">Index</a>
+                <a href="hometown.html " class="nav-bar-items" aria-label="Move to HomeTown page:Demographic Info HomeTown"> HomeTown</a>
+                <a href="aboutmefavorites.html " class="nav-bar-items" aria-label="Move to the AboutMe page:Demographic Info,Favorites and HomeTown"> AboutMe</a>
+                <a href="timetable.html " class="nav-bar-items" aria-label="Move to TimeTable Page,With adjacent Form and Php Link"> TimeTable</a>
+                <a href="animations.html " class="nav-bar-items" aria-label="Move to Animation Page:Links to use of animation, and dotpoints on what has been implemented"> Animation</a>
+            </div>
+        </nav>
+        <!--Main Content Section-->
+    </header>
+    <main>
+        <h1 class="box-container-v3" id="heading">Timetable and Form</h1>
+        <section class="timetable-page">
+
+            <div class="container">
+                <div id="time-table-container">
+                    <div class="column">
+                        <table>
+                            <caption>
+                                <h2 class="box-container-v3">Timetable days of week and schedule</h2>
+                            </caption>
+                            <thead>
+                                <tr>
+                                    <th>Day</th>
+                                    <th>9:30 - 10:30</th>
+                                    <th>10:30 - 11:30</th>
+                                    <th>11:30 - 12:30</th>
+                                    <th>12:30 - 2:30</th>
+                                    <th>2:30 - 4:30</th>
+                                    <th>4:30 - 6:30</th>
+                                    <th>6:30 - 8:30</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="day"><b>Mon</b></td>
+                                    <td class="cos10005">Cos10005</td>
+                                    <td class="cos20031">Cos20031</td>
+                                    <td class="cos30019">Cos30019</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="day"><b>Tue</b></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="cos20031">Cos20031</td>
+                                    <td class="cos20019">Cos20019</td>
+                                </tr>
+                                <tr>
+                                    <td class="day"><b>Wed</b></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="cos10005">Cos10005</td>
+                                    <td class="cos30019">Cos30019</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="day"><b>Thu</b></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="cos20019">Cos20019</td>
+                                </tr>
+                                <tr>
+                                    <td class="day"><b>Fri</b></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <img src="images/logo.png" id="dog-logo" alt="Art of a Greyhound curdled up inside of circle button shaped borders">
+                </div>
+            </div>
+        </section>
+
+        <article>
+            <h2 class="box-container-v3">Form</h2>
+            <div class="form-link">
+                <form id="survey" method="post" action="https://mercury.swin.edu.au/it000000/cos10005/surveytest.php">
+                    <fieldset>
+                        <legend class="basics">Form Link</legend>
+                        <label class="enrolled">Are you enrolled, or have completed any of these Subjects? </label>
+                        <fieldset>
+                            <!-- Add condition like if checkbox is clicked then it will require the other one -->
+                            <label class="cos10005">Cos10005
+                        <input type="checkbox" name="cos10005" id="class1"><br>
+                    </label>
+
+                            <label class="cos20019">Cos20019
+                        <input type="checkbox" name="cos20019" id="class2"><br>
+                    </label>
+
+                            <label class="cos20031">Cos20031
+                        <input type="checkbox" name="cos20031" id="class3"><br>
+                    </label>
+
+                            <label class="cos30019">Cos30019
+                        <input type="checkbox" name="cos30019" id="class4"><br>
+                    </label>
+
+                            <!-- Animation 2 -->
+                            <div class="hide-box">
+                                <label class="cos0000">Check me if you want to add Another Subject</label>
+                                <input type="checkbox" id="another" name="addother">
+
+                                <!-- Hidden input box that only appears if checkbox is clicked -->
+                                <input type="text" id="hidden-box" name="other" maxlength="8" placeholder="Cos10009" required><br><br>
+
+                                <!-- submit button maybe add a disabled clause if input is not valid -->
+                                <input type="submit" id="submitbtn" value="Save">
+                            </div>
+                        </fieldset>
+                    </fieldset>
+                    <!-- Example from older lab aka lab 3 - LOOK AT OLDER LAB to add in to get to work -->
+                </form>
+            </div>
+        </article>
+    </main>
+    <footer>
+        <section class="footer-text">
+            <h2 id="contact">Contact Info:<br>
+                <a href="mailto:105401129@student.swin.edu.au">105401129@student.swin.edu.au
+            </a>
+            </h2>
+            <img id="logo" src="images/moo.png" alt="Art of a pygmy hippo screaming">
+            <ul class="footer-link-nav" id="footer-nav">
+                <li class="list-link-item">
+                    <a href="index.html">Index</a>
+                </li>
+                <li class="list-link-item">
+                    <a href="hometown.html">HomeTown</a>
+                </li>
+                <li class="list-link-item">
+                    <a href="aboutmefavorites.html">AboutMe</a>
+                </li>
+
+                <li class="list-link-item">
+                    <a href="timetable.html">Timetable</a>
+                </li>
+                <li class="list-link-item">
+                    <a href="animations.html">Animation</a>
+                </li>
+
+            </ul>
+        </section>
+    </footer>
+
+</body>
+
+</html>

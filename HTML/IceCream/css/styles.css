@@ -1,0 +1,906 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+main {
+    margin-left: 1.5%;
+    margin-top: 1.5%;
+    line-height: 1.6;
+    padding: 0;
+    width: 95vw;
+    box-sizing: border-box;
+}
+
+main {
+    background-color: #f5e2b8;
+    border-radius: 1%;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 20px;
+}
+
+.history-block {
+    background-color: red;
+    width: 95%;
+    height: 100px;
+    padding: 0;
+    margin-left: 2%;
+}
+
+#unlisted {
+    display: none;
+}
+
+#gen-unlist:checked+#unlisted {
+    display: block;
+}
+
+#addLiveOthers {
+    display: none;
+}
+
+
+/*--------------------------Nav Bar Arwner---------------------------------------**/
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
+    background-color: rgb(223, 153, 54);
+    /* avoid horizontal scroll */
+}
+
+.awning {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    z-index: 3;
+    overflow: hidden;
+    height: 63px;
+}
+
+.panel {
+    flex: 1 1 0;
+    height: 80%;
+    background-color: red;
+    position: relative;
+    z-index: 1;
+    color: white;
+    /* base layer */
+}
+
+.panel:nth-child(even) {
+    background-color: white;
+    color: #ff7676;
+}
+
+
+/*Nav Bar light up alt panel*/
+
+
+/* Even items: Red text & underline */
+
+nav ul li.panel:nth-child(even) a.active {
+    font-weight: bold;
+    color: red;
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-underline-offset: 4px;
+}
+
+
+/* Odd items: pink text & underline */
+
+nav ul li.panel:nth-child(odd) a.active {
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: underline;
+    text-decoration-color: #ffffff;
+    text-underline-offset: 4px;
+}
+
+
+/*Main page, ul  */
+
+main ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 0.5rem;
+}
+
+.menu-box li {
+    gap: 0.2px;
+    padding: 1px;
+    margin: 1px;
+    width: 50%;
+    text-align: center;
+    font-size: clamp(10px, 1.5vw, 14px);
+}
+
+main li {
+    background-color: #f9f7f1;
+    border-left: 5px solid #d7a86e;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease;
+}
+
+.nav-highlight {
+    border: 2px solid blue;
+    background-color: #d0e7ff;
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+
+/* The shape penel background */
+
+.panel::after {
+    content: '';
+    position: absolute;
+    bottom: -50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    border-bottom-left-radius: 100% 100%;
+    border-bottom-right-radius: 100% 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+
+/* Link styling */
+
+.panel a {
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    top: 15%;
+    height: 90%;
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 2;
+    /* above the ::after */
+}
+
+.awning li {
+    flex: 1 1 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    /* also ensure li has no bullet */
+}
+
+.all-content {
+    background-color: rgb(227, 181, 143);
+    width: 90%;
+    min-height: 95vw;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    padding: 10px;
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------FOOTER  -------------------------------------------------------------------------------------------------------------*/
+
+.location,
+.menu {
+    flex-wrap: wrap;
+}
+
+.menu-box h3 {
+    text-align: center;
+}
+
+#intro {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.menu-box li {
+    margin-left: 25%;
+}
+
+footer {
+    font-size: 0.7rem;
+    margin-top: 0;
+    background-color: #f8f8f8;
+    border-top: 3px solid #d7a86e;
+    color: #5c4033;
+}
+
+.footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-logo img {
+    width: 10%;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-inner ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-inner li {
+    margin: 0px;
+}
+
+.footer-text h4 {
+    font-size: 1.5rem;
+    color: #ff7676;
+}
+
+.footer-text strong {
+    font-size: 0.8rem;
+}
+
+.footer-text {
+    font-size: 1rem;
+    color: #5c4033;
+}
+
+
+/*Idea was to put little icons next to them but it ended up taking away too much from the design, kept the names as it fits well despite it*/
+
+.icons a {
+    color: #d77a61;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.icons a:hover {
+    color: #ff7676;
+    text-decoration: underline;
+    /* highlight on hover */
+}
+
+.copywrite {
+    font-size: 0.9rem;
+    color: #8b6b4d;
+    margin-top: 10px;
+}
+
+
+/*------------------------------------------------------------Index------------------------------------------------*/
+
+.image img {
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 20%;
+    margin-left: 40%;
+}
+
+p {
+    color: #6f4e37;
+    font-size: 1rem;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: #f4d6ae;
+    margin: 2rem 0;
+}
+
+.about-text h2 {
+    color: #5c4033;
+    font-family: 'Segoe UI', sans-serif;
+    margin-bottom: 0.5rem;
+}
+
+
+/* Each flavor block Book said this is good */
+
+.types_ice_cream>div {
+    background-color: #fff4e8;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.types_ice_cream>div:hover {
+    transform: translateY(-3px);
+}
+
+
+/* Flavor title */
+
+.types_ice_cream h3 {
+    font-family: 'Georgia', serif;
+    color: #a0522d;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+#nepo {
+    color: #14d37d;
+}
+
+
+/* Flavor descriptions */
+
+.types_ice_cream p {
+    color: #4a3c2b;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+
+/* Ingredients section */
+
+.ingredients-choc-mint,
+.ingredients-vanilla,
+.ingredients-neapolitan,
+.ingredients-rainbow,
+.ingredients-choc-caramel,
+.ingredients-cookies-cream {
+    background-color: #fef3e9;
+    padding: 1rem;
+    border-left: 4px solid #dca675;
+    border-radius: 10px;
+    color: #4b3b2a;
+    font-size: 0.5rem;
+    margin: 3px;
+}
+
+#choc-mint,
+#menu-choc-mint {
+    background-color: #B8E0D2;
+    /*gradient*/
+    padding-bottom: 2%;
+}
+
+#vanilla,
+#menu-vanilla {
+    background-color: #f5e0b3;
+    /*gradient*/
+    padding-bottom: 2%;
+}
+
+#neapolitan,
+#menu-neapolitan {
+    /*https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient*/
+    background: linear-gradient( to right, #aa734e 0%, /* chocolate start */
+    #aa734e 33.33%, /* chocolate end */
+    #FFF6E5 33.33%, /* cream start */
+    #FFF6E5 66.66%, /* cream end */
+    #FBA1B7 66.66%, /* Oink start */
+    #FBA1B7 100%
+    /* pink end */
+    );
+    /*gradient*/
+    padding-bottom: 2%;
+}
+
+#rainbow,
+#menu-rainbow {
+    background-color: #e0ccf1;
+    padding-bottom: 2%;
+}
+
+#fudge-caramel-swirl,
+#menu-fudge-caramel-swirl {
+    background-color: #D7A86E;
+    padding-bottom: 2%;
+}
+
+#cookies-and-cream,
+#menu-cookies-and-cream {
+    background-color: #f9f7f1;
+    padding-bottom: 2%;
+}
+
+.main-box {
+    gap: 1rem;
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 20px;
+    color: #333;
+    /* full width */
+}
+
+.main-box2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+
+/*This is a format temp they stay */
+
+.main-box2 .left-column,
+.main-box2 .right-column {
+    flex: 1 1 45%;
+}
+
+.flavour-stack:hover {
+    background-color: #fff6e5;
+}
+
+.flavour-stack {
+    background-color: #feedc8;
+}
+
+fieldset {
+    border: 2px solid #ffb6b6;
+    border-radius: 12px;
+    padding: 1.25rem;
+    margin-bottom: 0.2em;
+    background-color: #fff6e5;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+    transition: background-color 0.3s ease;
+}
+
+fieldset:hover {
+    background-color: #fde2e4;
+    /* Blush pink on hover like moms wedding */
+}
+
+.left-column,
+.right-column {
+    flex: 1;
+    min-width: 100px;
+    padding: 2%;
+    margin-top: 1rem;
+    border-radius: 12px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.left-column {
+    background-color: #fff6e5;
+}
+
+.right-column {
+    background-color: #fde2e4;
+}
+
+.right-column {
+    max-width: 600px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+}
+
+#intro {
+    background-color: lightblue;
+}
+
+i {
+    color: darkgreen;
+}
+
+.about-image {
+    display: flex;
+    gap: 1rem;
+    background-color: rgb(58, 167, 203);
+    flex: 1;
+}
+
+.about-us {
+    display: flex;
+    gap: 1rem;
+}
+
+
+/*RegisterFORM STUFF*/
+
+
+/*https://stackoverflow.com/questions/49989131/how-to-tick-a-checkbox-on-clicking-an-image
+*/
+
+.flavour-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 1rem auto 0 auto;
+    /* 2 columns */
+}
+
+.flavour-option {
+    display: inline-block;
+    cursor: pointer;
+    padding: 5px;
+    position: relative;
+    margin: 2px;
+    border: 3px solid transparent;
+    border-radius: 12px;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.flavour-option input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.flavour-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flavour-content img {
+    width: 60px;
+    margin-top: -25px;
+    object-fit: contain;
+    z-index: 0;
+}
+
+.flavour-content span {
+    margin-bottom: 15px;
+    /* spasse below image */
+    color: #fff;
+    background-color: grey;
+    font-size: 0.9rem;
+    padding: 2%;
+    border-radius: 4px;
+    user-select: none;
+    text-align: center;
+    width: auto;
+}
+
+
+/*THIS triggers the border */
+
+.flavour-option:has(input:checked) {
+    border-color: red;
+    transform: scale(1.03);
+}
+
+.flavour-content img.cone {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Ensure scoop is above only when selected */
+
+.flavour-option:has(input:checked) .flavour-content img.scoop {
+    position: relative;
+    z-index: 2;
+}
+
+
+/*This controls the 2 colun layout do not ask why, */
+
+input {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    /* Optional for consistency */
+    box-sizing: border-box;
+}
+
+.mobile-flavours {
+    visibility: hidden;
+    margin-top: -50px;
+}
+
+legend {
+    font-weight: bold;
+    font-size: clamp(16px, 1.5vw, 20px);
+    color: #ff7676;
+    padding: 0 10px;
+    border-bottom: 2px solid #ff7676;
+    width: fit-content;
+    cursor: default;
+}
+
+input.valid,
+select.valid {
+    border: 5px solid green;
+    padding: 5px;
+    box-shadow: 0 0 5px green;
+}
+
+input.error,
+select.error {
+    border: 2px solid red;
+    padding: 5px;
+    box-shadow: 0 0 5px red;
+}
+
+#delivery-address,
+#payment-method-section,
+#card-section {
+    display: none;
+}
+
+
+/*-
+-
+-
+ORDER
+-
+-
+*/
+
+
+/* Hide the checkbox */
+
+
+/*Reveal the input if the checkbox is checked*/
+
+.hidden {
+    display: none;
+}
+
+#same-as-delivery {
+    display: none;
+}
+
+#card-section,
+#card-number,
+#card-number-input {
+    display: none;
+}
+
+.form-link {
+    width: 95%;
+}
+
+
+/*
+-
+-
+-
+-
+-
+
+Radio code fix no like defualt
+*/
+
+.radio-input {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    /* space between rows */
+    margin-left: 20px;
+    font-size: clamp(11px, 2vw, 15px);
+    gap: 8px;
+}
+
+.radio-input label {
+    cursor: pointer;
+    display: flex;
+    /* vertically center input and text */
+    align-items: center;
+}
+
+#hear-about {
+    font-size: clamp(12px, 1vw, 15px);
+    margin: 10px;
+    background-color: #fde2e4;
+    padding: 3px;
+    color: #5c4033;
+}
+
+.flavor-slide article h4,
+.flavor-slide h3+p+article+div>h3 {
+    display: none;
+}
+
+.radio-group label {
+    font-size: clamp(12px, 1.5vw, 15px);
+    margin: 0;
+}
+
+
+/*cHANEGS THE size of the radio which allows in person to be on one line*/
+
+.radio-input input[type="radio"] {
+    width: 50%;
+}
+
+
+/*Reused*/
+
+h1 {
+    padding: 5px;
+    text-align: center;
+}
+
+h1,
+h2,
+h3 {
+    color: #ef6a6a;
+    text-decoration: underline;
+    text-underline-offset: 0.4rem;
+    margin-bottom: 5px;
+    /*move a little*/
+}
+
+
+/*Lab 8,9,10 reference code*/
+
+.button {
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: lightgrey;
+    background: linear-gradient(#ccc, lightgrey);
+    padding: 0.25em;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    margin-right: 20px;
+    float: right;
+}
+
+.button:hover {
+    background-color: darkgrey;
+    background: linear-gradient(#ccc, darkgrey);
+    text-decoration: underline;
+}
+
+.window {
+    display: none;
+    z-index: 2;
+    position: fixed;
+    top: 50%;
+    margin-top: -5em;
+    margin-left: 26%;
+    background-color: rgb(143, 181, 194);
+    border-radius: 15px;
+    border: solid 1px blue;
+    box-shadow: 10px 10px 5px #888;
+    padding: 2rem;
+    width: auto;
+    height: auto;
+}
+
+.main-box3 {
+    display: flex;
+    gap: 0.5rem;
+    margin: 1rem;
+    padding-top: 10px;
+}
+
+.main-box3 .left-column,
+.main-box3 .right-column {
+    flex: 1;
+    padding: 5px;
+    box-sizing: border-box;
+    min-width: 300px;
+    height: auto;
+    /* optional for responsive */
+}
+
+li {
+    color: #333;
+}
+
+p,
+label {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+.main-box3 .left-column {
+    width: 100%;
+}
+
+#overlay {
+    z-index: 1;
+    visibility: hidden;
+    position: fixed;
+    /*Block out the entire screen*/
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: grey;
+    opacity: 0.5;
+}
+
+
+/*Carousal like the horses*/
+
+#flavors {
+    position: relative;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    background: #4a90e2;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 4px;
+}
+
+.carousel-btn.prev {
+    left: 5px;
+    z-index: 10;
+    transform: rotate(180deg);
+}
+
+.carousel-btn.next {
+    right: 5px;
+}
+
+.carousel-track {
+    overflow: hidden;
+    min-height: 320px;
+}
+
+
+/*default must hide shame*/
+
+.flavor-slide {
+    display: none;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.flavor-slide.active {
+    display: block;
+}
+
+
+/*never ever ever touch temp he is the one who controls th cream*/
+
+#temp {
+    display: flex;
+    justify-content: space-between;
+    /* optional */
+    gap: 20px;
+    /* optional spacing between columns */
+}
+
+#implemented-features ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#features {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#features a {
+    border-radius: 4px;
+    display: inline-block;
+}
+
+a {
+    color: darkgreen;
+}

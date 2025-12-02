@@ -1,0 +1,40 @@
+Test data
+
+
+for form validation
+
+----------------------------Register Page----------------------------
+
+
+YoungJohnson19
+
+Apple@0912
+
+Apple@john.com
+
+
+----------------------------Order Page-------------------------------
+
+Delivery
+//Auto force pay online
+
+credit card
+//Cannot enter info unless type selected
+
+Card:
+4532391294412327
+
+Full Name:
+John Apple
+
+Street and House Number:
+49 Barnwood HWY
+
+Postcode:
+3190
+
+City:
+Melbourne
+
+
+CONTACT

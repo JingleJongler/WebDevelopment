@@ -1,0 +1,13 @@
+could  be cool to add a sliding thing that increases letter spacing based on the moved amount 
+                        That way it would actively demonstrate the animation and be interactive
+                         ________________
+                        |  |----------   |         = Apple
+                        |________________|
+                         ________________
+                        |  ---|--------  |         = A p p l e
+                        |________________|
+                         ________________
+                        |  ------|-----  |         = A  p  p  l  e
+                        |________________|
+                        would be best to use keyframes for it
+                     

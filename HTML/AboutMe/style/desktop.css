@@ -1,0 +1,790 @@
+        @media screen and (min-width: 600px) {
+            /*Due to only having 2 css files i have set up css for majority combinded tablet with mobile, */
+            /*---------------------------Default elements Start-------------------------------*/
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                background-color: #f9e900;
+                font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+            }
+            main {
+                position: relative;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                box-sizing: border-box;
+                /*apperance*/
+                background-color: rgb(250, 240, 207);
+                border: 4px solid red;
+                /*padding and size*/
+                width: 90%;
+                min-height: auto;
+                padding: 1vw;
+                margin: 1vw;
+                margin-top: -0.5%;
+                margin-left: 5.5%;
+                /* Overflow and wrapping */
+                overflow: auto;
+                overflow-x: auto;
+                overflow-wrap: break-word;
+                word-wrap: break-word;
+            }
+            article {
+                width: 95%;
+            }
+            h1 {
+                padding: 10px;
+            }
+            h2 {
+                font-size: 2.25vw;
+            }
+            h3 {
+                font-size: 1.5vw;
+            }
+            h1,
+            h2 {
+                color: rgb(11, 11, 97);
+                text-align: center;
+                margin: 0px;
+            }
+            hr {
+                width: 105%;
+                border: 2px solid red;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            p {
+                /* font-size: 20px; ALT SIZE*/
+                color: rgb(73, 48, 25);
+            }
+            ol {
+                margin-left: 30px;
+                list-style-type: none;
+            }
+            ol li,
+            ul li {
+                padding: 0px;
+                font-weight: 100;
+                list-style-type: none;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            th,
+            /*Control text elements size*/
+            td {
+                text-align: left;
+                border: 1px solid rgb(231, 117, 0);
+                font-size: clamp(10px, 1vw, 15px);
+            }
+            th {
+                background-color: rgb(242, 194, 71);
+                color: rgb(73, 48, 25);
+            }
+            /*change color of the day class items=mon,tue,wed,thu,fri to brown*/
+            table .day {
+                color: rgb(73, 48, 25);
+            }
+            img {
+                object-fit: contain;
+                height: 100%;
+                width: 100%;
+            }
+            a {
+                color: rgb(118, 51, 87);
+            }
+            /*------------------------------Text Related---------------------------------------------------*/
+            /*Used for context part of AboutMe page and */
+            .small {
+                color: rgb(139, 7, 62);
+                font-size: clamp(11px, 1.2vw, 18px);
+                margin-left: 20px;
+                padding-right: 20px;
+            }
+            .small strong {
+                font-weight: 600;
+            }
+            /*------------------------------Text Related---------------------------------------------------*/
+            /*---------------------------Nav-Bar  Start---------------------------------*/
+            a {
+                color: rgb(240, 38, 42);
+            }
+            a:hover,
+            #submitbtn:hover {
+                text-decoration: none;
+                border-bottom: 0.5em solid rgb(255, 134, 20);
+                text-transform: uppercase;
+                font-weight: 700;
+                color: rgb(0, 72, 240);
+                letter-spacing: 0.2ch;
+            }
+            #validator-link:hover,
+            #gov-link-1:hover,
+            #gov-link-2:hover {
+                border-bottom: 0.2em solid rgb(255, 134, 20);
+            }
+            nav {
+                margin: 0;
+                padding: 0;
+            }
+            .nav-bar-container {
+                width: 91%;
+                margin: 0 auto;
+                box-sizing: border-box;
+                margin-top: 1vh;
+                margin-left: 5vw;
+            }
+            .nav-bar-main {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .nav-bar-items {
+                /* padding: 1vw;
+        padding-left: 2vw;
+        margin: 1vw 0.5vw;
+        width: auto;
+        max-width: 120%;*/
+                flex: 1;
+                padding: 1vw 1vw;
+                margin: 0.5vw 0.5vw;
+                color: rgb(240, 38, 42);
+                background-color: rgb(255, 186, 12);
+                border: 5px solid red;
+                font-size: clamp(12px, 2vw, 25px);
+                text-align: center;
+                display: inline-block;
+                text-decoration: none;
+                box-sizing: border-box;
+            }
+            /*---------------------------Nav-Bar  End---------------------------------*/
+            /*---------------------------Container----------------------------*/
+            .container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 1%;
+                margin-left: 5%;
+                width: 100%;
+            }
+            .column {
+                padding-right: 15%;
+                margin-bottom: 0px;
+            }
+            .favorites-all .column {
+                margin: 5%;
+                background-color: rgb(240, 239, 239);
+                padding-right: 15%;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                margin-bottom: 0px;
+            }
+            /*---------------------------Container Boxes Start---------------------------------*/
+            .header-title-container {
+                width: 100%;
+                height: auto;
+                border: 10px solid red;
+                background-color: rgb(255, 186, 12);
+                color: rgb(240, 38, 42);
+                box-sizing: border-box;
+                text-align: center;
+            }
+            .box-container,
+            .box-container-v2,
+            .box-container-v3,
+            .box-container-v3-game {
+                background-color: rgb(255, 186, 12);
+                border: 3px solid rgb(240, 38, 42);
+                color: rgb(240, 38, 42);
+                display: flex;
+                margin-top: 10px;
+                margin: 2px;
+                justify-content: center;
+            }
+            .box-container-v3,
+            .box-container-v3-game {
+                width: 100%;
+                padding: 2px;
+                position: relative;
+                margin: 5px;
+            }
+            .box-container {
+                width: 20%;
+                font-size: 30px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            .box-container-v2 {
+                width: 35%;
+                font-size: 25px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            /*---------------------------Container Boxes End---------------------------------*/
+            /*------------------------Text Elements Start-------------------------------------------- */
+            .paragraph-text {
+                font-size: clamp(12px, 1.5vw, 18px);
+                margin: 0;
+                margin-left: 15px;
+                padding: 10px;
+                margin-left: 5%;
+                margin-right: 5%;
+            }
+            .h1-title {
+                font-size: 5vw;
+                color: red;
+                margin: 0;
+                text-shadow: 2px -1px black, 2px -1px 0 black, 2px 1px 0 black, 2px 1px 0 black;
+                /*Resource for outline around text
+    https://fluentsupport.com/how-to-create-outline-text-in-css/
+    
+    */
+            }
+            /*------------------------Text Elements End --------------------------------------------*/
+            /*---------------------------Index  Start---------------------------------*/
+            /*---------------------------Index  Start---------------------------------*/
+            .introduction-section {
+                color: #121212;
+            }
+            #valid {
+                border: 0;
+                width: 88px;
+                height: 31px;
+                margin-left: 20px;
+            }
+            #welcome {
+                margin-left: 4%;
+                font-size: clamp(16px, 1vw, 20px);
+            }
+            #dog-logo {
+                width: 45%;
+                margin-left: 40%;
+                max-width: 200px;
+                display: inline-block;
+            }
+            /*---------------------------Index  End---------------------------------*/
+            /*---------------------------Index  End---------------------------------*/
+            /*---------------------------homeTown Start-------------------------------------------*/
+            .hometown-section .box-container-v3 {
+                width: 95%;
+                margin-left: 15px;
+            }
+            #map {
+                height: 80%;
+                width: 80%;
+                object-fit: contain;
+            }
+            .population-stats-gender,
+            .population-stats-ancestry {
+                width: 90%;
+                max-width: 70%;
+            }
+            .population h2,
+            .ancestry h2 {
+                font-size: clamp(18px, 1.5vw, 30px);
+                margin-right: 30%;
+                color: rgb(107, 0, 44);
+                padding: 2%;
+            }
+            .population table {
+                border-collapse: collapse;
+                border-spacing: 0;
+                width: 100%;
+                height: 20%;
+                border: 1px solid #ddd;
+                margin-bottom: 20px;
+            }
+            .population table th,
+            .ancestry table th {
+                font-size: clamp(14px, 1vw, 20px);
+                padding: 5px;
+            }
+            .population table td,
+            .population table tr,
+            .ancestry table td,
+            .ancestry table tr {
+                font-size: clamp(12px, 1vw, 18px);
+                padding: 5px;
+                color: rgb(58, 38, 69);
+            }
+            .hometown-page .basics {
+                width: 100%;
+                left: 25%;
+                position: relative;
+            }
+            /*---------------------------homeTown End-------------------------------------------*/
+            /*---------------------------Favorites Start-------------------------------------------*/
+            aside img {
+                width: 100%;
+                height: auto;
+                margin: 10px;
+                margin-left: 15%;
+            }
+            .favorite-games aside {
+                /*Controls the placement and the auto flex ability of the hamburger image*/
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 20px;
+            }
+            .favorites-all {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                border-radius: 10px;
+                width: 100%;
+                gap: 1em;
+            }
+            .favorite-tv-shows,
+            .favorite-games {
+                padding-left: 30px;
+                padding-bottom: 0px;
+            }
+            .favorite-tv-shows {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+            }
+            /*CSS for controlling the list item properties*/
+            .favorite-tv-shows-list,
+            .favorite-games-list {
+                padding: 5px;
+            }
+            .favorite-tv-shows-list-item,
+            .favorite-games-list-item {
+                line-height: 100%;
+                justify-content: center;
+                color: rgb(11, 11, 97);
+                font-size: clamp(14px, 1vw, 25px);
+                margin-left: -5%;
+            }
+            /*General P text styling,*/
+            .favorite-tv-shows-list-item p,
+            .favorite-games-list-item p {
+                margin: 2px;
+                font-size: clamp(12px, 1vw, 18px);
+                /*Clamp at 18max*/
+                margin-left: 10px;
+                color: rgb(44, 147, 192);
+            }
+            .favorite-tv-shows,
+            .favorite-games {
+                margin-bottom: 20px;
+            }
+            .favorite-tv-shows-list-item,
+            .favorite-games-list-item {
+                margin-right: 1%;
+                font-size: clamp(14px, 1vw, 25px);
+                font-weight: 100;
+            }
+            .number {
+                font-weight: bold;
+                color: red;
+            }
+            span/*Only used with number element*/
+            {
+                font-size: clamp(18px, 2vw, 30px);
+            }
+            /*---------------------------About Me Start----------------------------------------*/
+            .achievements {
+                flex-basis: 100%;
+                box-sizing: border-box;
+                margin-left: 1rem;
+            }
+            .basics,
+            .about-me-box-info {
+                border: 2px solid rgb(240, 38, 42);
+                background-color: rgb(255, 186, 12);
+                width: 90%;
+                padding: 5px;
+                text-align: center;
+                margin-left: 5%;
+            }
+            .basics p {
+                font-size: clamp(12px, 1vw, 20px);
+                padding: 0;
+            }
+            .basics .small {
+                font-size: clamp(10px, 1vw, 15px);
+            }
+            .basics-box-position-v2 {
+                margin-left: 20px;
+                text-align: center;
+            }
+            .achievements .about-me-items li {
+                padding: 0px;
+                margin: 10px;
+            }
+            blockquote a:hover {
+                color: rgb(240, 38, 42);
+                border: 1px
+            }
+            /*About me items*/
+            .about-me-items {
+                width: 100%;
+            }
+            .about-me-items li {
+                padding-right: 5%;
+                padding-left: 5%;
+                font-size: clamp(9px, 1.2vw, 14px);
+                color: rgb(73, 48, 25);
+            }
+            #about-me-ordered-list hr {
+                width: 100%;
+                margin-left: 8%;
+                border: solid 0.5px red;
+            }
+            #about-me-ordered-list h2,
+            #two-achievements-in-my-life h2 {
+                font-size: clamp(14px, 1.5vw, 28px);
+                color: rgb(107, 0, 44);
+                padding-top: 10px;
+            }
+            .basics h2 {
+                font-size: clamp(16px, 1.2vw, 30px);
+                padding: 0;
+                margin: 0;
+                color: rgb(240, 38, 42);
+                padding-left: 20px;
+            }
+            /*---------------------------About Me END----------------------------------------*/
+            /*---------------------------TimeTable Start----------------------------------------*/
+            .timetable-page .column {
+                width: 10%;
+                margin: 20px;
+            }
+            #heading {
+                margin: 10px;
+            }
+            #time-table-container {
+                overflow-x: auto;
+                display: flex;
+                width: calc(100% - 10px);
+                padding: 10px;
+                box-sizing: border-box;
+            }
+            .timetable-page .box-container-v3 {
+                width: 100%;
+                padding: 0;
+                margin-left: 0%;
+            }
+            .timetable-page #dog-logo {
+                width: 15%;
+                margin: 20px;
+                position: relative;
+                left: 55%;
+            }
+            .timetable-page table {
+                font-size: clamp(15px, 2vw, 23px);
+                position: relative;
+                border-collapse: collapse;
+                margin: 5%;
+            }
+            .timetable-page .box-container-v3 {
+                right: 10px;
+                width: 90%;
+                margin: 10px;
+                padding: 5px;
+                margin-top: -20px;
+            }
+            .timetable-page table th,
+            .timetable-page table td,
+            .timetable-page table tr {
+                padding: 2px;
+                text-align: center;
+                position: relative;
+                font-size: clamp(12px, 1.5vw, 20px);
+            }
+            .cos10005,
+            .cos20019,
+            .cos20031,
+            .cos30019 {
+                font-weight: bold;
+            }
+            .cos10005 {
+                color: blue;
+            }
+            .cos20031 {
+                color: rgb(62, 153, 67);
+            }
+            .cos20019 {
+                color: orange;
+            }
+            .cos30019 {
+                color: red;
+            }
+            /*-------------------------Form Start-----------------------------*/
+            .enrolled {
+                font-weight: bold;
+                color: red;
+            }
+            legend {
+                font-weight: bold;
+                color: red;
+                font-size: clamp(12px, 2vw, 20px);
+                padding: 5px;
+            }
+            fieldset {
+                padding: 10px;
+                font-size: clamp(10px, 2vw, 15px);
+            }
+            fieldset .basics {
+                width: 25%;
+                padding: 5px;
+                margin-left: 0%;
+            }
+            .form-link {
+                padding: 10px;
+            }
+            .cos0000 {
+                color: rgb(118, 51, 51);
+            }
+            #submitbtn {
+                font-size: clamp(10px, 2vw, 15px);
+                background-color: rgb(255, 186, 12);
+                color: red;
+                padding: 2.5px;
+                padding-left: 1vw;
+                border: solid red;
+                padding-right: 1vw;
+            }
+            #hidden-box {
+                display: none;
+                font-size: clamp(11px, 2vw, 15px);
+            }
+            #another:checked+#hidden-box
+            /*Reveal the input if the checkbox is checked*/
+            {
+                display: block;
+            }
+            /*Inital state-hide the div*/
+            #other-class {
+                display: none;
+            }
+            /*Condition for when to show the hidden if checkbox is currently checked*/
+            #another:checked+#hidden-box+#other-class {
+                display: block;
+            }
+            /*Condition for if field is left empty and checkbox is not checked*/
+            input:invalid {
+                border: 2px solid red;
+            }
+            /*Initally the box will be hidden, unless*/
+            /*-------------------------Form End-----------------------------*/
+            /*---------------------------TimeTable End----------------------------------------*/
+            /*-------------------------------Footer Start---------------------------------------*/
+            footer {
+                max-width: 100%;
+                background-color: rgb(255, 186, 12);
+                border: 5px solid rgb(240, 38, 42);
+                box-sizing: border-box;
+                position: relative;
+                top: 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                color: rgb(11, 11, 97);
+                text-align: center;
+            }
+            #contact strong {
+                font-size: 15px;
+            }
+            .footer-text h2 {
+                font-size: clamp(12px, 1vw, 18px);
+            }
+            .footer-text {
+                font-size: clamp(15px, 1vw, 30px);
+                padding: 10px;
+            }
+            .footer-link-nav {
+                display: flex;
+                justify-content: center;
+                /* Center horizontally */
+                padding: 0;
+                margin-top: 10px;
+            }
+            .footer-link-nav li {
+                /*Link space*/
+                list-style-type: none;
+                margin: 0 1%;
+            }
+            .footer-link-nav li a {
+                text-decoration: none;
+                font-size: clamp(12px, 1.2vw, 20px);
+            }
+            .footer-link-nav li a:hover {
+                color: rgb(240, 38, 42);
+            }
+            .container {
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 1%;
+            }
+            .column {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            .about-me-columns {
+                flex: 1 1 50%;
+                min-width: 300px;
+            }
+            .introduction-section .box-container-v3,
+            .hometown-page .box-container-v3 {
+                margin-left: 9%;
+                right: 2%;
+                width: 90%;
+            }
+            th,
+            td {
+                padding: 1px;
+                font-size: clamp(15px, 1vw, 25px);
+            }
+            .favorites-all .box-container-v3 {
+                width: 100%;
+                padding: 10px;
+                margin: 10px;
+                margin-left: 20px;
+                align-items: center;
+                justify-content: center;
+            }
+            .favorites-all .box-container-v3-game {
+                width: 100%;
+                padding: 10px;
+                margin-left: 35px;
+                align-items: center;
+                margin-top: 10px;
+                justify-content: center;
+            }
+            .favorites-all .column {
+                flex: 1 1 45%;
+                max-width: 500px;
+            }
+            .favorites-all>section,
+            .favorites-all>article {
+                display: inline-block;
+                vertical-align: top;
+                padding-bottom: 20px;
+            }
+            .favorites-all section#my-favorite-tv-shows-info,
+            .favorites-all article#favorite-games-info-section {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 30px;
+            }
+            .favorites-all {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                text-align: center;
+                width: 100%;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+            /*
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    aniamtion
+    
+    
+    
+    
+    
+    
+    anime
+    */
+            .animations {
+                margin: 0;
+                padding: 0;
+                margin-bottom: -5%;
+            }
+            .animations .cont p {
+                font-size: 19px;
+            }
+            /*aniamtionssssssssssss IT IS*/
+            .animations .column {
+                margin: 0;
+                width: 100%;
+            }
+            .all-links {
+                margin: 2%;
+            }
+            .animation-link {
+                color: #0077cc;
+                text-decoration: none;
+                font-weight: bold;
+                margin-top: 2px;
+                display: block;
+                top: 14.285vh;
+                padding: 2%;
+                cursor: pointer;
+            }
+            .animation-3 {
+                padding: 5%;
+                padding-bottom: 0;
+            }
+            .animation-link strong {
+                color: rgb(240, 38, 42);
+                font-size: clamp(12px, 1.7vw, 25px);
+            }
+            /*Artifical nav bar target*/
+            #nav-bar {
+                padding: 10px;
+                transition: border 0.3s ease;
+            }
+            #nav-bar:target {
+                border: 2px solid black;
+            }
+            /*Artifical footer bar target*/
+            #footer-nav {
+                padding: 10px;
+                transition: border 0.3s ease;
+            }
+            #footer-nav:target {
+                border: 2px solid black;
+            }
+            /*-------------------Animation 1-------------------------------------------------------
+    Img bounce only when cursor is hovering*/
+            #logo {
+                width: 15%;
+                display: inline-block;
+                transition: border 0.3s ease;
+            }
+            /*Artifical footer bar target*/
+            #logo:target {
+                border: 2px solid black;
+            }
+            #logo:focus {
+                border: 5px solid black;
+            }
+            #logo:hover {
+                animation: bounce 0.6s ease-in-out infinite;
+            }
+            @keyframes bounce {
+                0%,
+                100% {
+                    transform: translateY(-15px);
+                }
+                50% {
+                    transform: translateY(0);
+                }
+            }
+            /*aniamtion stuff*/
+        }

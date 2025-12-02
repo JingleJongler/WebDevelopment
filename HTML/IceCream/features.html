@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Features page for Ice cream website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <meta name="description" content="Assignment 2">
+    <meta name="keywords" content="Features">
+    <meta name="author" content="Joanne Woltanski">
+    <!--Alt Davis-->
+</head>
+
+<body>
+    <div id="nav-all">
+        <nav id="nav-menu">
+            <div class="line"></div>
+            <ul class="awning">
+                <li class="panel"><a href="index.html">Index</a></li>
+                <li class="panel"><a href="register.html">Register</a></li>
+                <li class="panel"><a href="order.html">Order</a></li>
+                <li class="panel"> <a href="features.html" class="active">Features</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <h2>FEATURES</h2>
+
+        <!-- Nav/Links to Features -->
+        <nav id="features">
+            <a href="#feature1" data-feature="feature1">Feature 1</a>
+            <a href="#feature2" data-feature="feature2">Feature 2</a>
+            <a href="#feature3" data-feature="feature3">Feature 3</a>
+        </nav>
+
+        <!-- Feature Sections 
+         Try to remeber why you used code
+         -->
+        <section id="implemented-features">
+            <h3>Implemented Features</h3>
+            <ul>
+                <li id="feature1">
+                    <strong>Highlight the menu item in the navigator corresponding to the current webpage</strong><br> Is on all pages, for example the
+                    <a href="features.html#feature1" class="feature-link">Features page</a> or <a href="order.html">Order page</a>.
+                </li>
+                <li id="feature2">
+                    <strong>Auto fill addresses <i>"same-as-delivery"</i> checkbox in <code>order.html</code></strong><br>will copy delivery address to billing address when active, or show inline error if delivery address is incomplete.
+                    <a href="order.html#same-as-delivery" class="feature-link">Try it here</a>.
+                </li>
+                <li id="feature3">
+                    <strong>Credit Card option types selection in <code>order.html</code></strong><br> Choose between Visa, MasterCard, or American Express and input limited credit card number length accordingly. Mastercard and Visa both have a 16 number
+                    Cap, whilst American Express has a 15 number cap.
+                    <a href="order.html#payment-method" class="feature-link">Try it here</a>.
+                </li>
+
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <div class="footer-inner">
+            <!-- Logo -->
+            <div class="footer-logo">
+                <img src="images/logo.png" alt="SweetLife Logo">
+            </div>
+            <!-- Open hours -->
+            <ul class="availability">
+                <li>
+                    <span class="footer-text">
+                      <strong>Open Hours</strong>
+                      <strong>MON-FRI:</strong> 8am - 5pm
+                    </span>
+                </li>
+                <li>
+                    <span class="footer-text">
+                        <strong>SAT-SUN:</strong> 9am - 4pm
+                    </span>
+                </li>
+            </ul>
+
+            <!-- Contact Information -->
+            <ul class="icons">
+                <li>
+                    <a href="mailto:CustomerSupport@sweetlife.com" class="icon-for-email" aria-label="Email Customer Support">
+                Email: CustomerSupport@sweetlife.com
+              </a>
+                </li>
+                <li>
+                    <a href="tel:0000000000" class="icon-for-phone" aria-label="Call Customer Support">
+                Phone Number: 000 000 000
+              </a>
+                </li>
+            </ul>
+
+            <!-- Copyright info -->
+            <p class="copywrite">&copy; 2025 SweetLife. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

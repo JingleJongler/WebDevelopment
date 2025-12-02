@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Animations</title>
+    <link rel="stylesheet" type="text/css" href="style/mobile.css">
+    <link rel="stylesheet" type="text/css" href="style/desktop.css">
+    <meta name="description" content="Animation page for assignment 1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <header>
+        <!-- Main Title Header Section-->
+        <div class="header-title-container">
+            <h1 class="h1-title">Assignment 1 Cos10005</h1>
+        </div>
+        <!-- Navigation Bar using ARIA landmarks-->
+        <nav class="nav-bar-container">
+            <div class="nav-bar-main" id="nav-bar">
+                <a href="index.html " class="nav-bar-items" aria-label="Move to the Index page">Index</a>
+                <a href="hometown.html " class="nav-bar-items" aria-label="Move to HomeTown page:Demographic Info HomeTown"> HomeTown</a>
+                <a href="aboutmefavorites.html " class="nav-bar-items" aria-label="Move to the AboutMe page:Demographic Info,Favorites and HomeTown"> AboutMe</a>
+                <a href="timetable.html " class="nav-bar-items" aria-label="Move to TimeTable Page,With adjacent Form and Php Link"> TimeTable</a>
+                <a href="animations.html " class="nav-bar-items" aria-label="Move to Animation Page:Links to use of animation, and dotpoints on what has been implemented"> Animation</a>
+            </div>
+        </nav>
+        <!--Main Content Section-->
+    </header>
+    <main>
+        <div>
+            <h1 class="box-container-v3">Animations</h1>
+            <div class="animations">
+
+                <article>
+                    <div class="container">
+                        <div class="column">
+                            <!--Animation 1 section-->
+
+                            <h2>Animation 1:</h2>
+                            <p>This is a <em>hover based animation</em> that utilizes the "a" attribute, that increases the letter-spacing and makes a orange line appear under the word hovered, as well as other features depending on which page is using it.
+                            </p>
+                            <div class="all-links">
+                                <a href="#nav-bar" class="animation-link"><strong>Nav-Bar:</strong> Internal hosted Link<br></a>
+                                <p class="small">When hovered over it will decrease the box size mimicking a button being clicked</p>
+                                <a href="#footer-nav" class="animation-link"><strong>Foot-Bar:</strong> Internal hosted Link<br></a>
+                                <a href="index.html#validator-link" class="animation-link"><strong>Index:</strong> External hosted Link<br></a>
+                                <a href="hometown.html#gov-link-1 " class="animation-link"><strong>Hometown:</strong> External hosted Link 1<br></a>
+                                <a href="hometown.html#gov-link-2 " class="animation-link"><strong>Hometown:</strong> External hosted Link 2<br></a>
+                                <a href="timetable.html#submitbtn" class="animation-link"><strong>Button:</strong>External hosted Link<br></a>
+                                <!-- Your content here -->
+
+
+                            </div>
+                        </div>
+
+                        <!--could  be cool to add a sliding thing that increases letter spacing based on the moved amount 
+                        That way it would actively demonstrate the animation and be interactive
+                        see idea.txt
+                    
+                        -->
+                        <div class="column">
+                            <aside>
+                                <!--Animation 2 section-->
+                                <h2>Animation 2:</h2>
+                                <p>A <em>bounce animation</em> that is reliant on the cursor hovering over the image in the footer,it will infinitely bounce as long as the cursor is hovering over it.</p>
+                                <div class="all-links"><a href="#logo" class="animation-link"><strong>Bounce:</strong>External hosted Link<br></a></div>
+                                <!--Due to the image having no clear boundary line the a href link led to nothing and was redundant, so i implemented code to make a artifical target which will do the same as the inbuilt function when it cannot work-->
+                                <!--<img src=" images/logo.png " id="dog-logo" alt="Art of a Greyhound curdled up inside of circle button shaped borders ">
+                           --></aside>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <article>
+
+                <div class="animation-3">
+                    <h2>Animation 3:</h2>
+                    <p>A hidden animation that triggers the visibility of a input box only when the corresponding checkbox is checked. When this checkbox is checked, it will require the user to input data into the field in order to submit form data to the
+                        Php site.
+                    </p>
+                    <a href=" timetable.html#another" class="animation-link"><strong>Hometown:</strong>Hidden Button visibility<br></a></div>
+
+            </article>
+        </div>
+
+        <article>
+            <div id="seamonkey-container">
+                <div class="all-seamonkey-container">
+                    <div id="bottom-trap"></div>
+                    <div id="top-trap"></div>
+                    <div id="plastic-container"></div>
+                    <div id="innertube-top"></div>
+                    <div id="innertube-bottom"></div>
+
+                    <div id="outside-shape1"></div>
+                    <div id="outside-shape2"></div>
+                    <div id="outside-shape3"></div>
+                    <div id="outside-shape4"></div>
+                    <div id="outside-shape5"></div>
+
+                    <div id="outside-shape7"></div>
+                    <div id="outside-shape8"></div>
+
+
+
+                    <div class="floating-seamonkey2">
+                        <img src="images/sea.png" alt="Floating Image of a sea monkey " class="floating-seamonkey ">
+                    </div>
+
+
+
+                    <section class="chest-all ">
+                        <div id="chest "></div>
+                        <div id="lid "></div>
+                        <div id="lock "></div>
+                    </section>
+                </div>
+
+                </section>
+            </div>
+        </article>
+
+
+
+
+
+        <!-- 
+        Animation 1 A hover animation, it capitalizes all text,increases the letter-spacing and makes a blue line appear under the word hovered, 
+        Implementations below, include the above, as well as a few other things. On The Timetable page, it
+        appears on HomeTown page in the href section for a links, to the government site
+        appears in the Navbar, and the Footer
+        appears as a button, and the increase padding property can be seen In the footer, it turns the text red, 
+        
+        Animation2, 
+        is a bounce aniamiton that utilizes keyframes and the hover attibute to force teh image on the footer to bounce endlessly aslong as the curosr is hovering over it
+        this is implememtned on everypage
+
+        Animation 3,is a hidden animation that triggers the visibility of a input box only when the corresponding checkbox is clicked
+        When this checkbox is checked, it will require the user to input data into the field in order to submit the form data
+
+
+
+    
+    -->
+    </main>
+    <footer>
+        <section class="footer-text ">
+            <h2 id="contact ">Contact Info:<br>
+                <a href="mailto:105401129@student.swin.edu.au ">105401129@student.swin.edu.au
+            </a>
+            </h2>
+            <img id="logo " src="images/moo.png " alt="Art of a pygmy hippo screaming ">
+            <ul class="footer-link-nav " id="footer-nav ">
+                <li class="list-link-item ">
+                    <a href="index.html ">Index</a>
+                </li>
+                <li class="list-link-item ">
+                    <a href="hometown.html ">HomeTown</a>
+                </li>
+                <li class="list-link-item ">
+                    <a href="aboutmefavorites.html ">AboutMe</a>
+                </li>
+
+                <li class="list-link-item ">
+                    <a href="timetable.html ">Timetable</a>
+                </li>
+                <li class="list-link-item ">
+                    <a href="animations.html ">Animation</a>
+                </li>
+
+            </ul>
+        </section>
+    </footer>
+</body>
+
+</html>
